@@ -1,0 +1,30 @@
+{
+  "name": "get-malshab-service",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-ts": "tsc",
+    "build-lint": "npm run lint && npm run build-ts",
+    "build": "npm run build-ts",
+    "lint": "eslint . --ext .ts",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "mock": "npm run build-ts && node dist/shared/mock.js ",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.14",
+    "ts-dotenv": "^0.8.3"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.0.2-beta2",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "typescript": "^3.3.3"
+  }
+}
